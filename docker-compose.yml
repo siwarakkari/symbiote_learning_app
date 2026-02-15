@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  symbiote-app:
+    build: .
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MISTRAL_API_KEY=${MISTRAL_API_KEY}
+      - FASTAPI_HOST=0.0.0.0
+      - FASTAPI_PORT=8000
+    volumes:
+      - .:/app
+    networks:
+      - symbiote-network
+
+networks:
+  symbiote-network:
+    driver: bridge

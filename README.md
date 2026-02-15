@@ -1,4 +1,4 @@
-# Symbiote Learning App v2.0
+# Symbiote Learning App
 
 **AI-Powered Collaborative Learning Platform with Clean Architecture**
 
